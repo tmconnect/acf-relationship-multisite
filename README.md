@@ -149,5 +149,8 @@ This ACF field type is compatible with:
 
 
 ### Changelog
+**1.0.1**
+* Compatibility update for ACF 5.1.5
+
 **1.0.0**
 * First release
