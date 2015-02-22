@@ -925,7 +925,7 @@ class acf_field_relationship_multisite extends acf_field {
 	function acf_get_sites() {
 
 		$ref = array();
-		$sites = wp_get_sites( $args );
+		$sites = wp_get_sites();
 		foreach ($sites as $site) {
 			$current_blog_details = get_blog_details( array( 'blog_id' => $site['blog_id'] ) );
 			$site_id = $site['blog_id'];
