@@ -41,7 +41,7 @@ In editor mode you'll see from which site the post list is get from.
 
 **Usage**
 
-The field content is stored in an two dimensional array. In this array [selected posts] you will get an array with the all the post objects (if you selet 'Post Object' in field sttings)
+The field content is stored in an two dimensional array. In this array [selected posts] you will get an array with the all the post objects (if you selet 'Post Object' in field settings)
 
 ```
 Array
@@ -98,29 +98,6 @@ Array
 
 To get the post on the frontend you need to do a foreach loop.
 
-**With Post ID**
-
-```php
-	    // get field value
-	    $posts = get_field('field_name');
-
-	    if( $posts ):
-	        // switch to multisite
-	        switch_to_blog( $posts['site_id'] ); ?>
-	        <ul>        
-	            <?php foreach ($posts['selected_posts'] as $post): // variable must be called $post (IMPORTANT) ?>
-	                <?php setup_postdata($post); ?>
-	                <li>
-	                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	                    <span>Custom field from $post: <?php the_field('author'); ?></span>
-	                </li>
-	            <?php endforeach; ?>
-	        </ul>
-	        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-	        <?php restore_current_blog(); // IMPORTANT switch back to current site?>
-	    <?php endif; ?>
-```
-
 **With Post Object**
 
 ```php
@@ -142,6 +119,29 @@ To get the post on the frontend you need to do a foreach loop.
         <?php endif; ?>
 ```
 
+**With Post ID**
+
+```php
+        // get field value
+        $posts = get_field('field_name');
+
+        if( $posts ):
+            // switch to multisite
+            switch_to_blog( $posts['site_id'] ); ?>
+            <ul>        
+                <?php foreach ($posts['selected_posts'] as $post): // variable must be called $post (IMPORTANT) ?>
+                    <?php setup_postdata($post); ?>
+                    <li>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        <span>Custom field from $post: <?php the_field('author'); ?></span>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+            <?php restore_current_blog(); // IMPORTANT switch back to current site?>
+        <?php endif; ?>
+```
+
 ### Compatibility
 
 This ACF field type is compatible with:
@@ -150,7 +150,7 @@ This ACF field type is compatible with:
 
 ### Changelog
 **1.0.2**
-* Small bugbix
+* Small bugfix
 * 
 **1.0.1**
 * Compatibility update for ACF 5.1.5
