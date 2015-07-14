@@ -33,11 +33,11 @@ function my_register_fields()
 
 The ACF Relationship Multisite field is similar to the standard ACF Relationship field. You will get the selection of all installed multisites and a few options.
 
-![ScreenShot](http://www.dreihochzwo.de/acf-relationship-multisite/acf-relationship-multisite-field_settings.png)
+http://www.dreihochzwo.de/acf-relationship-multisite/acf-relationship-multisite-field_settings.png
 
 In editor mode you'll see from which site the post list is get from.
 
-![ScreenShot](http://www.dreihochzwo.de/acf-relationship-multisite/acf-relationship-multisite_editor-field.png)
+http://www.dreihochzwo.de/acf-relationship-multisite/acf-relationship-multisite_editor-field.png
 
 **Usage**
 
