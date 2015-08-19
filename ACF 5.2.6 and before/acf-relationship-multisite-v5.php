@@ -809,7 +809,7 @@ class acf_field_relationship_multisite extends acf_field {
 
 		// bail early if no value
 		if( empty($value) ) {
-		
+			restore_current_blog();		
 			return $value;
 			
 		}
