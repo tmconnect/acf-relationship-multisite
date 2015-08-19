@@ -148,11 +148,17 @@ To get the post on the frontend you need to do a foreach loop.
 This plugin needs the installation of ACF 5. There's a version included for ACF 5.2.6 and before and a version for ACF 5.2.7 and newer.
 
 ### Changelog
-**1.1.01**
+**1.1.02 (ACF >= 5.2.7)**
+* Fixed an error which doesn't return further ACF fields if the Multisite field has no value selected
+
+**1.1.01 (ACF >= 5.2.7)**
 * Fixed an error while seaching/scrolling in search field/list
 
-**1.1.0**
+**1.1.0 (ACF >= 5.2.7)**
 * Update for ACF 5.2.7
+
+**1.0.3 (ACF <= 5.2.6)**
+* Fixed an error which doesn't return further ACF fields if the Multisite field has no value selected
 
 **1.0.0**
 * First release
